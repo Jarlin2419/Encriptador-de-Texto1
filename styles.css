@@ -1,9 +1,12 @@
 
-/* Estilos globales */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+.centrar_titulo {
+    text-align: center;
 }
 
 body {
@@ -16,16 +19,8 @@ body {
     margin: 0;
 }
 
-header {
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-}
-
 .presentacion {
-    padding: 5%;
+    padding: 5% 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,11 +57,14 @@ header {
     height: auto;
 }
 
+/* Otros estilos */
+
 .instructions {
     margin-top: 20px;
     font-size: 14px;
-    color: #6c757d;
+    color: #6c757d; /* Color gris para el texto de las instrucciones */
 }
+
 
 .message-box {
     background-color: #f8d7da;
@@ -92,6 +90,17 @@ textarea, input, select {
     border-radius: 5px;
 }
 
+.texto {
+    width: 100%;
+    border: none;
+    font-family: "Intel";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+    background-color: #60E6D1;
+}
+
 button {
     padding: 10px 20px;
     font-size: 16px;
@@ -111,39 +120,7 @@ button:hover {
 }
 
 /* Media Queries */
-@media (max-width: 600px) {
-    .presentacion {
-        padding: 2%;
-    }
-
-    .presentacion_contenido {
-        width: 100%;
-        gap: 15px;
-    }
-
-    .container {
-        padding: 15px;
-    }
-
-    .instructions {
-        font-size: 12px;
-    }
-
-    textarea {
-        font-size: 14px;
-    }
-
-    button {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
-
-    .presentacion_imagen {
-        width: 80%;
-    }
-}
-
-@media (min-width: 601px) {
+@media (min-width: 600px) {
     .presentacion {
         flex-direction: row;
         justify-content: space-between;
@@ -166,13 +143,14 @@ button:hover {
         width: 100%;
     }
 
-    .footer {
-        background-color: #333;
+    .footer{
+        background-color: var(--color-terciario);
         padding: 24px;
-        color: #fff;
+        color: var(--color-primario);
         text-align: center;
-        font-family: Arial, sans-serif;
+        font-family: var(--fuente-Krona);
         font-size: 1.5rem;
-        font-weight: 400;
+        font-weight:400 ;
+        
     }
 }
