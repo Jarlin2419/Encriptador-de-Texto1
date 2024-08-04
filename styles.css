@@ -1,0 +1,156 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.centrar_titulo {
+    text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #DAE3CA;
+    margin: 0;
+}
+
+.presentacion {
+    padding: 5% 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.presentacion_contenido {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container {
+    text-align: center;
+    background: #DAE3CA;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.presentacion_imagen_y_mensajes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.presentacion_imagen {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Otros estilos */
+
+.instructions {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #6c757d; /* Color gris para el texto de las instrucciones */
+}
+
+
+.message-box {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.message-box p {
+    margin: 0;
+    font-size: 16px;
+}
+
+textarea, input, select {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #DAE3CA;
+    border-radius: 5px;
+}
+
+.texto {
+    width: 100%;
+    border: none;
+    font-family: "Intel";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+    background-color: #60E6D1;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Media Queries */
+@media (min-width: 600px) {
+    .presentacion {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .presentacion_contenido {
+        width: 50%;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .presentacion_imagen_y_mensajes {
+        width: 50%;
+    }
+
+    .presentacion_imagen {
+        width: 100%;
+    }
+
+    .footer{
+        background-color: var(--color-terciario);
+        padding: 24px;
+        color: var(--color-primario);
+        text-align: center;
+        font-family: var(--fuente-Krona);
+        font-size: 1.5rem;
+        font-weight:400 ;
+        
+    }
+}

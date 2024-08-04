@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header></header>
+    <main class="presentacion">
+        <section class="presentacion_contenido">
+            <h1 class="centrar_titulo">Encriptador de Texto</h1> 
+            <div class="container">                
+                <textarea name="texto" id="inputText" cols="30" rows="5" placeholder="Ingresa el texto aquí..."></textarea> 
+                <br>                
+                <br>
+                <textarea name="texto" id="outputText" cols="30" rows="5" placeholder="Resultado aparecerá aquí..." readonly></textarea>
+                <button class="actionButton" id="encryptButton">Encriptar</button>
+                <button class="actionButton" id="decryptButton">Desencriptar</button>
+                <button class="actionButton" id="clearButton">Limpiar</button> <!-- Nuevo botón -->
+                <p class="instructions">Solo debe ingresar letras minúsculas y sin caracteres especiales.</p> <!-- Título permanente -->
+                
+            </div>
+        </section>
+        <div class="presentacion_imagen_y_mensajes">
+            <img class="presentacion_imagen" src="Muñeco.png" alt="Imagen para encriptar texto">
+            <div class="message-box hidden" id="messageBox">
+                <p id="noMessage">Ningún mensaje fue encontrado.</p>
+                <p id="instructions">Ingresa el texto que desees encriptar o desencriptar.</p>
+                
+            </div>
+            <footer class="footer">
+                <p>Desarrollado por JARLIN PARDO</p>
+            </footer>
+        </div>
+        
+    </main>
+    <script src="script.js"></script>
+       
+</body>
+
+</html>
