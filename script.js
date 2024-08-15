@@ -30,24 +30,33 @@ document.addEventListener('DOMContentLoaded', () => {
     encryptButton.addEventListener('click', () => {
         const text = inputText.value.trim();
         if (!text) {
-            messageBox.classList.remove('hidden');
+            messageBox.classList.remove('hidden'); // Mostrar mensaje si no hay texto
             return;
         }
         outputText.value = encrypt(text);
-        inputText.value = ''; // Ocultar el texto en el campo de entrada
-        encryptButton.classList.add('hidden');
-        decryptButton.classList.remove('hidden');
-        clearButton.classList.remove('hidden');
+        outputText.classList.add('no-bg'); // Elimina la imagen de fondo
+
+        // Cambiar visibilidad de los botones
+        encryptButton.style.display = 'none';
+        decryptButton.style.display = 'inline-block';
+        clearButton.style.display = 'inline-block';
         messageBox.classList.add('hidden'); // Ocultar el cuadro de mensajes
+        inputText.value = ''; // Limpia el campo de entrada
     });
 
     // Evento para el botón de desencriptar
     decryptButton.addEventListener('click', () => {
         const text = outputText.value.trim();
+        if (!text) {
+            messageBox.classList.remove('hidden'); // Mostrar mensaje si no hay texto
+            return;
+        }
         outputText.value = decrypt(text);
-        decryptButton.classList.add('hidden');
-        encryptButton.classList.add('hidden');
-        clearButton.classList.remove('hidden');
+        outputText.classList.add('no-bg'); // Elimina la imagen de fondo
+
+        // Cambiar visibilidad de los botones
+        encryptButton.style.display = 'none';
+        clearButton.style.display = 'inline-block';
         decryptButton.disabled = true; // Deshabilita el botón "Desencriptar"
     });
 
@@ -55,15 +64,15 @@ document.addEventListener('DOMContentLoaded', () => {
     clearButton.addEventListener('click', () => {
         inputText.value = '';
         outputText.value = '';
-        clearButton.classList.add('hidden');
-        encryptButton.classList.remove('hidden');
-        decryptButton.classList.add('hidden');
-        decryptButton.disabled = false; // Habilita el botón "Desencriptar"
+        outputText.classList.remove('no-bg'); // Restablece la imagen de fondo
+
+        // Cambiar visibilidad de los botones
+        encryptButton.style.display = 'inline-block';
+        decryptButton.style.display = 'none';
+        clearButton.style.display = 'none';
         messageBox.classList.add('hidden'); // Ocultar el cuadro de mensajes
     });
 
-    // Inicializar la visibilidad de los botones y el cuadro de mensajes
-    clearButton.classList.add('hidden'); // Inicialmente oculto
-    decryptButton.classList.add('hidden'); // Inicialmente oculto
-    messageBox.classList.add('hidden'); // Inicialmente oculto
+    // Ocultar el cuadro de mensajes por defecto
+    messageBox.classList.add('hidden');
 });
