@@ -1,43 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encriptador de Texto</title>
+    <title>Encriptador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header></header>
-    <main class="presentacion">
-        <section class="presentacion_contenido">
-            <h1 class="centrar_titulo">Encriptador de Texto</h1> 
-            <div class="container">                
-                <textarea name="texto" id="inputText" cols="30" rows="5" placeholder="Ingresa el texto aquí..."></textarea> 
-                <br>                
-                <br>
-                <textarea name="texto" id="outputText" cols="30" rows="5" placeholder="Resultado aparecerá aquí..." readonly></textarea>
-                <button class="actionButton" id="encryptButton">Encriptar</button>
-                <button class="actionButton" id="decryptButton">Desencriptar</button>
-                <button class="actionButton" id="clearButton">Limpiar</button> <!-- Nuevo botón -->
-                <p class="instructions">Solo debe ingresar letras minúsculas y sin caracteres especiales.</p> <!-- Título permanente -->
-                
+<body class="body">
+    <header>
+        <img class="logo" src="Logo.jpg" alt="Imagen de Alura">
+    </header>
+    <main class="main">
+        <section>
+            <textarea id="inputText" class="text-area" cols="30" rows="10" placeholder="Ingrese aquí el texto"></textarea>
+            <div>
+                <h6 class="informacion">solo letras en minúscula y sin acentos</h6>
+                <div class="botones">
+                    <button id="encryptButton" class="btn-encriptar">Encriptar</button>
+                    <button id="decryptButton" class="btn-desencriptar">Desencriptar</button>
+                    <button id="clearButton" class="btn-limpiar">Limpiar</button>
+                </div>
+            </div>                         
+        </section>
+        <section>
+            <textarea id="outputText" class="mensaje" cols="30" rows="15" placeholder="Aquí aparecerá el texto"></textarea>
+            <div> 
+                <button class="btn-copiar">Copiar</button>
+            </div>
+            <div id="messageBox" class="hidden">
+                <p>No se ha ingresado texto para encriptar.</p>
             </div>
         </section>
-        <div class="presentacion_imagen_y_mensajes">
-            <img class="presentacion_imagen" src="Muñeco.png" alt="Imagen para encriptar texto">
-            <div class="message-box hidden" id="messageBox">
-                <p id="noMessage">Ningún mensaje fue encontrado.</p>
-                <p id="instructions">Ingresa el texto que desees encriptar o desencriptar.</p>
-                
-            </div>
-            <footer class="footer">
-                <p>Desarrollado por JARLIN PARDO</p>
-            </footer>
-        </div>
-        
     </main>
-    <script src="script.js"></script>
-       
+    <script src="script.js"></script> <!-- Asegúrate de que esta ruta sea correcta -->
 </body>
-
 </html>
