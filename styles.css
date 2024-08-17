@@ -126,7 +126,7 @@
     cursor: pointer;
     height: 40px; /* Reducir altura del botón */
     margin-left: 50px; /* Reducir margen izquierdo */
-    margin-top: 200px; /* Reducir margen superior */
+    margin-top: 10px; /* Reducir margen superior */
     width: 200px; /* Reducir ancho del botón */
     font-size: 14px; /* Reducir tamaño de la fuente */
 }
